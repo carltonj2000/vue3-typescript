@@ -10,13 +10,14 @@
   </router-link>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
   name: 'EventCard',
   props: {
     event: Object
   }
-}
+})
 </script>
 
 <style scoped>

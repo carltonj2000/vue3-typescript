@@ -5,12 +5,12 @@
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
+<script lang="ts">
+import { defineComponent } from 'vue'
 import EventCard from '@/components/EventCard.vue'
-import EventService from '../services/EventService'
+import EventService from '@/services/EventService'
 
-export default {
+export default defineComponent({
   name: 'EventList',
   components: {
     EventCard
@@ -28,7 +28,7 @@ export default {
       console.log(e)
     }
   }
-}
+})
 </script>
 
 <style scoped>
