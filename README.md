@@ -10,3 +10,5 @@ rm -rf .git
 vue add typescript # no class style syntax, yes babel, yes all to ts, no compile js
 # fix getEvent(id) to getEvent(id: string)
 ```
+
+- add vscode extension vueDx for typescript checking

@@ -9,20 +9,22 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import EventService from '@/services/EventService'
+// eslint-disable-next-line no-unused-vars
+import { EventItem } from '@/types'
 
 export default defineComponent({
   name: 'EventDetails',
   props: {
-    id: String
+    id: Number
   },
   data() {
     return {
-      event: null
+      event: {} as EventItem
     }
   },
   async created() {
     try {
-      const response = await EventService.getEvent(this.id)
+      const response = await EventService.getEvent(this.id || 123)
       this.event = response.data
     } catch (e) {
       console.log(e)
